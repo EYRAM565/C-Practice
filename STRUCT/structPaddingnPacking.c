@@ -2,22 +2,22 @@
 #include<stdlib.h>
 //#pragma pack(1)// turns on/off some features. without the pragma pack(1) the size of the struct below was 28bytes but when the pragma pack(1) is used the size strinks to 25 bytes 
 
-typedef struct student std;
+typedef struct House hse;
 
-struct student
+struct House
 {
-    char name[17];
-    int rollno;
-    float marks;
-}S;
+    char houseColor[17];
+    int numOfDoors;
+    float priceOfHouse;
+}H;
 
 
 
 void main()
 {
-   std S = {"kwasi", 2, 79.8};
-//    printf("%s %d %f", S.name, S.rollno, S.marks);
+   hse H = {"navy blue", 6, 479.8};
+   printf("%s %d %f", H.houseColor, H.numOfDoors, H.priceOfHouse);
 
-   printf("%d", sizeof(S));
+   // printf("%d", sizeof(H));
 
 }
