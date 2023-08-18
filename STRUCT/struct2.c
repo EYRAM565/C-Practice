@@ -1,19 +1,23 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 struct house
 {
-    char name;
+    char name[7];
     int numOfHouses;
     float numOfAcresOfLand;
 }hse;
 
-void main()
+ int main()
 {
 
-    int *ptr;
-    ptr = (int*)malloc(sizeof(hse));
+   struct house hse = {"Sucasa", 50, 10.25};
+    
+   struct house *ptr = (struct house*)malloc(sizeof(struct house));
     ptr = &hse;
-    hse = {"helloEstate", 20, 50.25};
-
+    printf("%s %d %f\n", ptr->name, ptr->numOfHouses, ptr->numOfAcresOfLand);
+    
+   free(ptr);
+   return 0;
 
 }
